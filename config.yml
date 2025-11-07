@@ -1,7 +1,0 @@
-title: "Git Started"
-description: "A structured introduction to Git and GitHub for new researchers"
-theme: minima
-markdown: kramdown
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
