@@ -1,4 +1,4 @@
-## 1. GIT COMMANDS AND THEIR USAGE
+# 1. GIT COMMANDS AND THEIR USAGE
 
 1. `git clone <url>`: this command lets you create a copy of an online repository on GitHub onto your computer.  
 
