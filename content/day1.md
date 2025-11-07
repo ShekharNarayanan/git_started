@@ -1,9 +1,3 @@
----
-title: "Git Started"
-layout: default
----
-
-
 # OVERVIEW
 
 Git is a version control software — meaning that it can track all versions of your code as you build your codebase. It is also absolutely essential when it comes to collaborating with colleagues on your code. This document has three sections:  
