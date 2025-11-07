@@ -32,17 +32,17 @@ main {
 nav.day-selector {
   margin-bottom: 30px;
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 nav.day-selector button {
-  background: white;
-  border: 1px solid #ddd;
+  background: #faf0e6;
+  border: 2px solid black;
   border-radius: 6px;
-  padding: 10px 16px;
+  padding: 20px 32px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-weight: 500;
+  font-weight: 1000;
 }
 
 nav.day-selector button:hover {
