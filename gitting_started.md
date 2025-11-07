@@ -95,7 +95,7 @@ If you decide you are finished with the TODO or the issue, you have to:
 
 4. In case of merge conflict, try to understand which changes are the cause and follow this [article](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts) Merge conflicts are quite common and help you learn more about Git, so don't panic when you see one 😄
 
-![](media/Picture9_b.PNG)
+![](media/Picture9_b.png)
 
 5. Click on **Merge pull request** and then **Confirm merge** when prompted to you as in step 3. GitHub will then show you a section that looks like the image below. You can now delete your branch on GitHub.  Note that you still need to delete the branch on your PC. The instructions on how to do this are at the end of section 3 part B.
 
