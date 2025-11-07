@@ -12,11 +12,14 @@ window.addEventListener("DOMContentLoaded", () => {
   buttons.forEach((btn) => {
     btn.addEventListener("click", async () => {
       const mdFile = `content/${btn.dataset.day}`;
+	  console.log("Fetching:", `content/${btn.dataset.day}`);
+
       console.log("📖 Loading:", mdFile);
       contentDiv.innerHTML = "<p>Loading content...</p>";
 
       try {
         const response = await fetch(mdFile);
+		console.log(mdFile);
         if (!response.ok) throw new Error(`File not found (${response.status})`);
         const mdText = await response.text();
         const html = converter.makeHtml(mdText);
