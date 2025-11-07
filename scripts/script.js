@@ -26,14 +26,20 @@ window.addEventListener("DOMContentLoaded", () => {
         // Convert Markdown to HTML
         const html = converter.makeHtml(mdText);
 
+        // === Animation reset logic (only change) ===
+        // Temporarily disable transitions so they can replay
+        contentDiv.style.transition = "none";
+        contentDiv.offsetHeight; // force layout refresh
+        contentDiv.style.transition = "";
+
         // Apply GitHub markdown styles
         contentDiv.innerHTML = html;
-
 
         // Trigger fade-in
         requestAnimationFrame(() => {
           contentDiv.classList.add("visible");
         });
+        // ============================================
       } catch (err) {
         console.error("⚠️ Error:", err);
         contentDiv.innerHTML = `<p style="color:red;">Error loading file: ${err.message}</p>`;
