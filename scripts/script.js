@@ -12,18 +12,27 @@ window.addEventListener("DOMContentLoaded", () => {
   buttons.forEach((btn) => {
     btn.addEventListener("click", async () => {
       const mdFile = `content/${btn.dataset.day}`;
-	  console.log("Fetching:", `content/${btn.dataset.day}`);
-
       console.log("📖 Loading:", mdFile);
+
+      // Reset for fade-out and loading state
+      contentDiv.classList.remove("visible");
       contentDiv.innerHTML = "<p>Loading content...</p>";
 
       try {
         const response = await fetch(mdFile);
-		console.log(mdFile);
         if (!response.ok) throw new Error(`File not found (${response.status})`);
         const mdText = await response.text();
+
+        // Convert Markdown to HTML
         const html = converter.makeHtml(mdText);
-        contentDiv.innerHTML = html;
+
+        // Apply GitHub markdown styles
+        contentDiv.innerHTML = `<article class="markdown-body">${html}</article>`;
+
+        // Trigger fade-in
+        requestAnimationFrame(() => {
+          contentDiv.classList.add("visible");
+        });
       } catch (err) {
         console.error("⚠️ Error:", err);
         contentDiv.innerHTML = `<p style="color:red;">Error loading file: ${err.message}</p>`;

@@ -5,6 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Git Started — Learn Git in 3 Days</title>
   <link rel="stylesheet" href="scripts/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5/github-markdown-light.min.css">
+
+<style>
+  body {
+    background: #f5f7fa;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+  }
+
+  nav.day-selector {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+  }
+
+  nav.day-selector button {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+
+  nav.day-selector button:hover {
+    background: #007bff;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+  }
+
+  #content {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    padding: 40px;
+    width: 90%;
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  #content.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .markdown-body {
+    line-height: 1.7;
+  }
+
+  ::selection {
+    background-color: #007bff22;
+  }
+</style>
+
 </head>
 
 <body>
