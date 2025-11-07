@@ -27,7 +27,8 @@ window.addEventListener("DOMContentLoaded", () => {
         const html = converter.makeHtml(mdText);
 
         // Apply GitHub markdown styles
-        contentDiv.innerHTML = `<article class="markdown-body">${html}</article>`;
+        contentDiv.innerHTML = html;
+
 
         // Trigger fade-in
         requestAnimationFrame(() => {

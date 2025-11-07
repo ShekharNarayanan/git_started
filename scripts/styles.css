@@ -1,16 +1,16 @@
 /* ====== Base layout ====== */
 body {
-  font-family: system-ui, sans-serif;
-  background-color: #fafafa;
-  color: #222;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  background: #faf0e6;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
 }
 
 header {
-  background-color: #0366d6;
-  color: white;
+  background-color: #faf0e6;
+  color: black;
   padding: 2rem 1rem;
   text-align: center;
 }
@@ -29,29 +29,26 @@ main {
 }
 
 /* ====== Day Selector ====== */
-.day-selector {
+nav.day-selector {
+  margin-bottom: 30px;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 10px;
 }
 
-.day-selector button {
+nav.day-selector button {
   background: white;
-  border: 2px solid #0366d6;
-  border-radius: 8px;
-  color: #0366d6;
-  padding: 0.8rem 1.5rem;
-  font-weight: bold;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 16px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: 500;
 }
 
-.day-selector button:hover {
-  background: #0366d6;
+nav.day-selector button:hover {
+  background: #007bff;
   color: white;
-  transform: translateY(-3px);
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
 }
 
 /* ====== Markdown content styling ====== */
@@ -80,7 +77,36 @@ main h2 {
 
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
   color: #666;
   font-size: 0.9em;
 }
+
+/* ====== Markdown container animation ====== */
+#content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  padding: 40px;
+  width: 90%;
+  max-width: 800px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ====== Markdown polish ====== */
+.markdown-body {
+  line-height: 1.7;
+}
+
+::selection {
+  background-color: #0366d622;
+}
+
+
